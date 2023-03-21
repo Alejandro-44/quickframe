@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31314886-7006-497d-a015-c5e948154165" name="Changes" comment="">
+    <list default="true" id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickFrame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/QuickFrame.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -32,9 +34,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "C:/Users/Alejandro/Personal-Projects/QuickFrame/src/main/kotlin/quickFrame",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -46,14 +54,43 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alejandro\Personal-Projects\QuickFrame\src\main\kotlin\quickFrame" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="quickFrame" />
+    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="quickFrame" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="QFrameTest.buildFrameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuickFrame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="quickFrame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="quickFrame" />
+      <option name="MAIN_CLASS_NAME" value="quickFrame.QFrameTest" />
+      <option name="METHOD_NAME" value="buildFrameTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.QFrameTest.buildFrameTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="31314886-7006-497d-a015-c5e948154165" name="Changes" comment="" />
+      <changelist id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="" />
       <created>1679192450570</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
