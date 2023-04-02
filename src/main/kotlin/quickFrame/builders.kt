@@ -6,8 +6,8 @@ fun buildFrame(build: QFrame.() -> Unit): QFrame {
     return frame
 }
 
-fun buildForm(rows: Int, cols: Int, hgap: Int=0, vgap: Int=0,build: QForm.() -> Unit): QForm {
-    val form = QForm(rows, cols, hgap, vgap)
+fun buildForm(build: QForm.() -> Unit): QForm {
+    val form = QForm()
     form.build()
     return form
 }

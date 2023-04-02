@@ -1,34 +1,37 @@
 package quickFrame
 
+import java.awt.GridBagConstraints
+import java.awt.GridBagLayout
 import java.awt.GridLayout
 import javax.swing.JPanel
 
-class QForm(rows: Int, cols: Int, hgap: Int, vgap: Int): JPanel()
+class QForm(): JPanel()
 {
     init {
-        layout = GridLayout(rows, cols, hgap, vgap)
+        layout = GridBagLayout()
     }
 
     private val builder = QComponentBuilder(this)
+    val grid = QGridConstarints()
 
     fun properties(block: QComponentBuilder.(QForm) -> Unit)
     {
         builder.block(this)
     }
 
-    fun label(text: String, block: QLabel.() -> Unit = {}): QLabel
+    fun label(text: String, block: QLabel.() -> Unit): QLabel
     {
         val lab = QLabel(text)
         lab.block()
-        this.add(lab)
+        this.add(lab, grid)
         return lab
     }
 
-    fun inputTxt( block: QTextField.() -> Unit = {}) : QTextField
+    fun textInput( block: QTextField.() -> Unit) : QTextField
     {
         val input = QTextField()
         input.block()
-        this.add(input)
+        this.add(input, grid)
         return input
     }
 
@@ -36,6 +39,6 @@ class QForm(rows: Int, cols: Int, hgap: Int, vgap: Int): JPanel()
     {
         val btn = QButton(text)
         btn.block()
-        this.add(btn)
+        this.add(btn,grid)
     }
 }
