@@ -32,9 +32,9 @@ class QForm(rows: Int, cols: Int, hgap: Int, vgap: Int): JPanel()
         return input
     }
 
-    fun button(block: QButton.() -> Unit)
+    fun button(text: String,block: QButton.() -> Unit)
     {
-        val btn = QButton()
+        val btn = QButton(text)
         btn.block()
         this.add(btn)
     }

@@ -3,7 +3,7 @@ package quickFrame
 import java.awt.event.ActionListener
 import javax.swing.JButton
 
-class QButton: JButton() {
+class QButton(text: String): JButton(text) {
 
     private val builder = QComponentBuilder(this)
 
