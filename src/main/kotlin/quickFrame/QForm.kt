@@ -62,4 +62,13 @@ class QForm(): JPanel()
         btn.block()
         this.add(btn,grid)
     }
+
+    fun<T> comboBox(block: QComboBox<T>.() -> Unit): QComboBox<T>
+    {
+        val combo = QComboBox<T>()
+        combo.block()
+        this.add(combo,grid)
+
+        return combo
+    }
 }
