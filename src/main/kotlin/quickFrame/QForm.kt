@@ -35,6 +35,27 @@ class QForm(): JPanel()
         return input
     }
 
+    fun password(block: QPasswordField.() -> Unit): QPasswordField {
+        val input = QPasswordField()
+        input.block()
+        this.add(input, grid)
+        return input
+    }
+
+    fun checkbox(block: QCheckBox.() -> Unit): QCheckBox {
+        val input = QCheckBox()
+        input.block()
+        this.add(input, grid)
+        return input
+    }
+
+    fun radioButton(block: QRadioButton.() -> Unit): QRadioButton {
+        val input = QRadioButton()
+        input.block()
+        this.add(input, grid)
+        return input
+    }
+
     fun button(text: String,block: QButton.() -> Unit)
     {
         val btn = QButton(text)

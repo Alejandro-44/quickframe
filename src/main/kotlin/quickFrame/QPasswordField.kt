@@ -1,12 +1,12 @@
 package quickFrame
 
-import javax.swing.JTextField
+import javax.swing.JPasswordField
 
-class QTextField: JTextField() {
+class QPasswordField: JPasswordField() {
 
     private val builder = QComponentBuilder(this)
 
-    fun properties(block: QComponentBuilder.(QTextField) -> Unit) {
+    fun properties(block: QComponentBuilder.(QPasswordField) -> Unit) {
         builder.block(this)
     }
 
