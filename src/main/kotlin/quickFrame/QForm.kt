@@ -1,11 +1,9 @@
 package quickFrame
 
-import java.awt.GridBagConstraints
 import java.awt.GridBagLayout
-import java.awt.GridLayout
 import javax.swing.JPanel
 
-class QForm(): JPanel()
+class QForm: JPanel()
 {
     init {
         layout = GridBagLayout()
