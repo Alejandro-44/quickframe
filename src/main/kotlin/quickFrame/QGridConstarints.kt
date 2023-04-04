@@ -2,22 +2,23 @@ package quickFrame
 
 import java.awt.GridBagConstraints
 import java.awt.Insets
+import java.awt.Point
 
 class QGridConstarints: GridBagConstraints() {
 
-    infix fun posx(p: Int) {
+    infix fun posX(p: Int) {
         this.gridx = p
     }
 
-    infix fun posy(p: Int) {
+    infix fun posY(p: Int) {
         this.gridy = p
     }
 
-    infix fun spanx(n: Int) {
+    infix fun spanX(n: Int) {
         this.gridwidth = n
     }
 
-    infix fun spanxy(n: Int) {
+    infix fun spanY(n: Int) {
         this.gridheight = n
     }
 
@@ -37,15 +38,20 @@ class QGridConstarints: GridBagConstraints() {
         this.insets = i
     }
 
-    infix fun span(n: Int) {
+    infix fun anchor(n: Int) {
         this.anchor = n
     }
 
-    infix fun weightx(d: Double) {
+    infix fun weightX(d: Double) {
         this.weightx = d
     }
 
-    infix fun weighty(d: Double) {
+    infix fun weightY(d: Double) {
         this.weighty = d
+    }
+
+    infix fun position(p: Point) {
+        this.gridx = p.x
+        this.gridy = p.y
     }
 }

@@ -1,11 +1,9 @@
 package quickFrame
 
-import java.awt.GridBagConstraints
 import java.awt.GridBagLayout
-import java.awt.GridLayout
 import javax.swing.JPanel
 
-class QForm(): JPanel()
+class QForm: JPanel()
 {
     init {
         layout = GridBagLayout()
@@ -35,10 +33,40 @@ class QForm(): JPanel()
         return input
     }
 
+    fun password(block: QPasswordField.() -> Unit): QPasswordField {
+        val input = QPasswordField()
+        input.block()
+        this.add(input, grid)
+        return input
+    }
+
+    fun checkbox(block: QCheckBox.() -> Unit): QCheckBox {
+        val input = QCheckBox()
+        input.block()
+        this.add(input, grid)
+        return input
+    }
+
+    fun radioButton(block: QRadioButton.() -> Unit): QRadioButton {
+        val input = QRadioButton()
+        input.block()
+        this.add(input, grid)
+        return input
+    }
+
     fun button(text: String,block: QButton.() -> Unit)
     {
         val btn = QButton(text)
         btn.block()
         this.add(btn,grid)
+    }
+
+    fun<T> comboBox(block: QComboBox<T>.() -> Unit): QComboBox<T>
+    {
+        val combo = QComboBox<T>()
+        combo.block()
+        this.add(combo,grid)
+
+        return combo
     }
 }
