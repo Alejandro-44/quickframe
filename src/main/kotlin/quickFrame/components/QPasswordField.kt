@@ -10,7 +10,5 @@ class QPasswordField: JPasswordField() {
         builder.block(this)
     }
 
-    infix fun columns(n: Int) {
-        this.columns = n
-    }
+
 }

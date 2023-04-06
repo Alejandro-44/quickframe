@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="Change in the method for Container Builder, now it works on the class Frame directly" />
+    <list default="true" id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="Moving more methods from components to Component Builder">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,12 +123,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680807322339</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change in the method for Component Builder, now it works on the JComponents class directly">
+      <created>1680807771138</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680807771138</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Moving more methods from components to Component Builder">
+      <created>1680808437050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680808437050</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change in the method for Container Builder, now it works on the class Frame directly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change in the method for Container Builder, now it works on the class Frame directly" />
+    <MESSAGE value="Change in the method for Component Builder, now it works on the JComponents class directly" />
+    <MESSAGE value="Moving more methods from components to Component Builder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving more methods from components to Component Builder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

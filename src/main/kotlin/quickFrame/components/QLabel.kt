@@ -9,8 +9,4 @@ class QLabel(text: String): JLabel(text) {
     fun properties(block: QComponentBuilder.(QLabel) -> Unit) {
         builder.block(this)
     }
-
-    infix fun aligntext(op: Int) {
-        this.horizontalAlignment = op
-    }
 }

@@ -10,7 +10,5 @@ class QTextField: JTextField() {
         builder.block(this)
     }
 
-    infix fun columns(n: Int) {
-        this.columns = n
-    }
+
 }

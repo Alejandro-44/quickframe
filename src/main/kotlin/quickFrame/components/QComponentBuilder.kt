@@ -4,14 +4,20 @@ import java.awt.Color
 import java.awt.Dimension
 import java.awt.Font
 import java.awt.LayoutManager
+import javax.swing.Icon
 import javax.swing.JComponent
 import javax.swing.JLabel
+import javax.swing.JRadioButton
+import javax.swing.JTextField
 
-class QComponentBuilder constructor () {
+class QComponentBuilder {
     val center = JLabel.CENTER
     val right = JLabel.RIGHT
     val left = JLabel.LEFT
 
+    /*
+    * General properties
+    * */
     infix fun JComponent.background(bg: Color) {
         this.background = bg
     }
@@ -52,4 +58,23 @@ class QComponentBuilder constructor () {
         this.isVisible = b
     }
 
+    infix fun JLabel.aligntext(op: Int) {
+        this.horizontalAlignment = op
+    }
+
+    infix fun JTextField.columns(n: Int) {
+        this.columns = n
+    }
+
+    infix fun JRadioButton.text(s: String) {
+        this.text = s
+    }
+
+    infix fun JRadioButton.icon(i: Icon) {
+        this.icon = i
+    }
+
+    infix fun JRadioButton.selected(b: Boolean) {
+        this.isSelected = b
+    }
 }
