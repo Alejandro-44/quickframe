@@ -9,7 +9,7 @@ class QForm: JPanel()
         layout = GridBagLayout()
     }
 
-    private val builder = QComponentBuilder(this)
+    private val builder = QComponentBuilder()
     val grid = QGridConstarints()
 
     fun properties(block: QComponentBuilder.(QForm) -> Unit)

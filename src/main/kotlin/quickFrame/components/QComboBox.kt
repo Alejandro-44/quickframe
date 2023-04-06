@@ -5,7 +5,7 @@ import javax.swing.JComboBox
 
 class QComboBox<T>: JComboBox<T>() {
 
-    private val builder = QComponentBuilder(this)
+    private val builder = QComponentBuilder()
 
     fun properties(block: QComponentBuilder.(QComboBox<T>) -> Unit) {
         builder.block(this)

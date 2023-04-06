@@ -7,37 +7,37 @@ import java.awt.LayoutManager
 import javax.swing.JComponent
 import javax.swing.JLabel
 
-class QComponentBuilder constructor (private val component: JComponent) {
+class QComponentBuilder constructor () {
     val center = JLabel.CENTER
     val right = JLabel.RIGHT
     val left = JLabel.LEFT
 
     infix fun JComponent.background(bg: Color) {
-        component.background = bg
+        this.background = bg
     }
 
     infix fun JComponent.fontFamily(font: Font) {
-        component.font = font
+        this.font = font
     }
 
     infix fun JComponent.color(foreground: Color) {
-        component.foreground = foreground
+        this.foreground = foreground
     }
 
     infix fun JComponent.size(d: Dimension) {
-        component.size = d
+        this.size = d
     }
 
     infix fun JComponent.layout(l: LayoutManager) {
-        component.layout = l
+        this.layout = l
     }
 
     infix fun JComponent.enabled(b: Boolean) {
-        component.isEnabled = b
+        this.isEnabled = b
     }
 
     infix fun JComponent.visible(b: Boolean) {
-        component.isVisible = b
+        this.isVisible = b
     }
 
 }

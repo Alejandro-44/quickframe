@@ -4,7 +4,7 @@ import javax.swing.JButton
 
 class QButton(text: String): JButton(text) {
 
-    private val builder = QComponentBuilder(this)
+    private val builder = QComponentBuilder()
 
     infix fun content(s: String) {
         this.text = s
