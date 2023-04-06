@@ -6,9 +6,9 @@ import javax.swing.JFrame
 
 class QFrame: JFrame() {
 
-    private val builder = QFrameBuilder(this)
+    private val builder = QContainerBuilder(this)
 
-    fun properties(block: QFrameBuilder.(QFrame) -> Unit) {
+    fun properties(block: QContainerBuilder.(QFrame) -> Unit) {
         builder.block(this)
     }
 

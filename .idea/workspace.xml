@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/quickFrame/QGridConstarints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/quickFrame/QGridConstarints.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +16,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Script" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -47,7 +47,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alejandro/Personal-Projects/QuickFrame/src/main/kotlin/quickFrame&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alejandro/Personal-Projects/QuickFrame&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -61,6 +61,13 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alejandro\Personal-Projects\QuickFrame\src\main\kotlin\quickFrame\utils" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="quickFrame.components" />
+      <recent name="quickFrame.containers" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="quickFrame" />
     </key>
@@ -68,7 +75,7 @@
       <recent name="quickFrame" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Kotlin.Main.kt">
     <configuration name="QFrameTest.buildFrameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuickFrame" />
       <extension name="coverage">
@@ -85,16 +92,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
+    <configuration name="Main.kt" type="JetRunConfigurationType" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="quickFrame.MainKt" />
       <module name="QuickFrame" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Kotlin.Main.kt" />
         <item itemvalue="JUnit.QFrameTest.buildFrameTest" />
       </list>
     </recent_temporary>

@@ -5,7 +5,7 @@ import java.awt.LayoutManager
 import javax.swing.JFrame
 import javax.swing.WindowConstants
 
-class QFrameBuilder constructor (private val container: JFrame) {
+class QContainerBuilder constructor (private val container: JFrame) {
     val EXIT = WindowConstants.EXIT_ON_CLOSE
     val DISPOSE = WindowConstants.DISPOSE_ON_CLOSE
     val NOTHING = WindowConstants.DO_NOTHING_ON_CLOSE
