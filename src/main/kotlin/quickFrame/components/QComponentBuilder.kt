@@ -28,6 +28,18 @@ class QComponentBuilder constructor () {
         this.size = d
     }
 
+    infix fun JComponent.preferredSize(d: Dimension) {
+        this.preferredSize = d
+    }
+
+    infix fun JComponent.maxSize(d: Dimension) {
+        this.maximumSize = d
+    }
+
+    infix fun JComponent.minsize(d: Dimension) {
+        this.minimumSize = d
+    }
+
     infix fun JComponent.layout(l: LayoutManager) {
         this.layout = l
     }
