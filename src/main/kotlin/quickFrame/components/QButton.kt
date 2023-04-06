@@ -1,6 +1,5 @@
-package quickFrame
+package quickFrame.components
 
-import java.awt.event.ActionListener
 import javax.swing.JButton
 
 class QButton(text: String): JButton(text) {

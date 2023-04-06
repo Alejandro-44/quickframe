@@ -1,4 +1,7 @@
-package quickFrame
+package quickFrame.utils
+
+import quickFrame.components.QForm
+import quickFrame.containers.QFrame
 
 fun buildFrame(build: QFrame.() -> Unit): QFrame {
     val frame = QFrame()

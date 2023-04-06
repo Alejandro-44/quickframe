@@ -1,13 +1,12 @@
-package quickFrame
+package quickFrame.components
 
 import javax.swing.Icon
-import javax.swing.JCheckBox
+import javax.swing.JRadioButton
 
-class QCheckBox: JCheckBox() {
-
+class QRadioButton: JRadioButton() {
     private val builder = QComponentBuilder(this)
 
-    fun properties(block: QComponentBuilder.(QCheckBox) -> Unit) {
+    fun properties(block: QComponentBuilder.(QRadioButton) -> Unit) {
         builder.block(this)
     }
 

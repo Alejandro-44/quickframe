@@ -1,8 +1,6 @@
-package quickFrame
+package quickFrame.components
 
 
-import javax.swing.ComboBoxModel
-import javax.swing.DefaultComboBoxModel
 import javax.swing.JComboBox
 
 class QComboBox<T>: JComboBox<T>() {

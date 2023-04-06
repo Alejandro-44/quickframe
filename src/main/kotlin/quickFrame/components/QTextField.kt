@@ -1,4 +1,4 @@
-package quickFrame
+package quickFrame.components
 
 import javax.swing.JTextField
 

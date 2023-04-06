@@ -1,4 +1,4 @@
-package quickFrame
+package quickFrame.components
 
 import java.awt.Color
 import java.awt.Dimension
