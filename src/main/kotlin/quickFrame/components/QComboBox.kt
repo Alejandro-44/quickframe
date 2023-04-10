@@ -12,9 +12,7 @@ class QComboBox<T>: JComboBox<T>() {
     }
 
     infix fun items(items: Array<T>) {
-        for (item in items) {
-            addItem(item)
-        }
+        items.forEach { addItem(it) }
     }
 
     infix fun selectedItem(i: Int) {

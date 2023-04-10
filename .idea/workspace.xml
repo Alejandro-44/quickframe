@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="Moving more methods from components to Component Builder">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/quickFrame/utils/Messages.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="QComponent-interface" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,7 +52,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alejandro/Personal-Projects/QuickFrame&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alejandro/Personal-Projects/TalleresEstructurasDatos/Taller22&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -103,6 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Main.kt" />
+        <item itemvalue="JUnit.QFrameTest.buildFrameTest" />
         <item itemvalue="Kotlin.Main.kt" />
         <item itemvalue="JUnit.QFrameTest.buildFrameTest" />
       </list>
