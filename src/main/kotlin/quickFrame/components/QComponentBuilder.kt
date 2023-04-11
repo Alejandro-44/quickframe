@@ -4,6 +4,7 @@ import java.awt.Color
 import java.awt.Dimension
 import java.awt.Font
 import java.awt.LayoutManager
+import javax.swing.BorderFactory
 import javax.swing.Icon
 import javax.swing.JComponent
 import javax.swing.JLabel
@@ -56,6 +57,10 @@ class QComponentBuilder {
 
     infix fun JComponent.visible(b: Boolean) {
         this.isVisible = b
+    }
+
+    infix fun JComponent.lineBorder(color: Color) {
+        this.border = BorderFactory.createLineBorder(color)
     }
 
     infix fun JLabel.aligntext(op: Int) {
