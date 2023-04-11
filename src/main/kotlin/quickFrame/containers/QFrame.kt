@@ -15,4 +15,16 @@ class QFrame: JFrame() {
     infix fun addToCenter(component: Component) {
         add(component, BorderLayout.CENTER)
     }
+
+    infix fun addToRight(component: Component) {
+        add(component, BorderLayout.WEST)
+    }
+
+    infix fun addToLeft(component: Component) {
+        add(component, BorderLayout.EAST)
+    }
+
+    infix fun addToBottom(component: Component) {
+        add(component, BorderLayout.SOUTH)
+    }
 }

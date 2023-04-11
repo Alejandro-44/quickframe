@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="Moving more methods from components to Component Builder" />
+    <list default="true" id="64a2ab48-e37e-4dde-9227-e05f65772e89" name="Changes" comment="Moving more methods from components to Component Builder">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/quickFrame/containers/QFrame.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/quickFrame/containers/QFrame.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
