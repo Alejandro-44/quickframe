@@ -13,8 +13,8 @@ class QRadioButton: JRadioButton() {
     private val builder = QComponentBuilder()
 
     /**
-     * Applies a [block] of [QComponentBuilder] properties to this [QButton].
-     * @param block a lambda expression with a receiver of type [QRadioButton].
+     * Applies a [block] of [QComponentBuilder] properties to this [QRadioButton].
+     * @param block a lambda expression with a receiver of type [QComponentBuilder].
      */
     fun properties(block: QComponentBuilder.(QRadioButton) -> Unit) {
         builder.block(this)

@@ -15,14 +15,6 @@ class QButton(text: String): JButton(text) {
     private val builder = QComponentBuilder()
 
     /**
-     * Sets the text of the button.
-     * @param s the text to set
-     */
-    infix fun content(s: String) {
-        this.text = s
-    }
-
-    /**
      * Applies a [block] of [QComponentBuilder] properties to this [QButton].
      * @param block a lambda expression with a receiver of type [QComponentBuilder].
      */
@@ -30,6 +22,14 @@ class QButton(text: String): JButton(text) {
         builder.block(this)
     }
 
+    /**
+     * Sets the text of the button.
+     * @param s the text to set
+     */
+    infix fun content(s: String) {
+        this.text = s
+    }
+    
     /**
      * Sets an action to be performed when the button is clicked.
      * @param action a lambda expression that defines the action to be performed when the button is clicked.
