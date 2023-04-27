@@ -2,6 +2,7 @@ package quickFrame.containers
 
 import java.awt.Dimension
 import java.awt.LayoutManager
+import java.awt.Point
 import javax.swing.JFrame
 import javax.swing.WindowConstants
 
@@ -31,5 +32,9 @@ class QContainerBuilder {
     }
     infix fun JFrame.resizable(b: Boolean) {
         this.isResizable = b
+    }
+
+    infix fun JFrame.location(p: Point) {
+        this.location = p
     }
 }
