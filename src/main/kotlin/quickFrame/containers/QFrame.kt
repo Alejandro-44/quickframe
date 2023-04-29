@@ -1,7 +1,5 @@
 package quickFrame.containers
 
-import quickFrame.components.QComponentBuilder
-import quickFrame.components.QRadioButton
 import java.awt.BorderLayout
 import java.awt.Component
 import javax.swing.JFrame
@@ -52,5 +50,13 @@ class QFrame: JFrame() {
      */
     infix fun addToBottom(component: Component) {
         add(component, BorderLayout.SOUTH)
+    }
+
+    /**
+     * Adds a component to the top region of the QFrame.
+     * @param component The component to be added to the top region.
+     */
+    infix fun addToTop(component: Component) {
+        add(component, BorderLayout.NORTH)
     }
 }
