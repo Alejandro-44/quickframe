@@ -1,6 +1,7 @@
 package quickFrame.components
 
 import java.awt.GridBagLayout
+import javax.swing.JComponent
 import javax.swing.JPanel
 
 /**
@@ -14,7 +15,8 @@ class QForm: JPanel()
     /**
      * Constructs a new QForm object and sets its layout to GridBagLayout.
      */
-    init {
+    init
+    {
         layout = GridBagLayout()
     }
 
@@ -45,6 +47,7 @@ class QForm: JPanel()
     fun label(text: String, block: QLabel.() -> Unit): QLabel
     {
         val lab = QLabel(text)
+        grid.clean()
         lab.block()
         this.add(lab, grid)
         return lab
@@ -60,6 +63,7 @@ class QForm: JPanel()
     fun textInput( block: QTextField.() -> Unit) : QTextField
     {
         val input = QTextField()
+        grid.clean()
         input.block()
         this.add(input, grid)
         return input
@@ -70,8 +74,10 @@ class QForm: JPanel()
      * @param block a function that takes a QPasswordField instance and applies the configuration.
      * @return the created QPasswordField object.
      */
-    fun password(block: QPasswordField.() -> Unit): QPasswordField {
+    fun password(block: QPasswordField.() -> Unit): QPasswordField
+    {
         val input = QPasswordField()
+        grid.clean()
         input.block()
         this.add(input, grid)
         return input
@@ -82,8 +88,10 @@ class QForm: JPanel()
      * @param block a function that takes a QCheckBox instance and applies the configuration.
      * @return the created QCheckBox object.
      */
-    fun checkbox(block: QCheckBox.() -> Unit): QCheckBox {
+    fun checkbox(block: QCheckBox.() -> Unit): QCheckBox
+    {
         val input = QCheckBox()
+        grid.clean()
         input.block()
         this.add(input, grid)
         return input
@@ -94,8 +102,10 @@ class QForm: JPanel()
      * @param block a function that takes a QRadioButton instance and applies the configuration.
      * @return the created QRadioButton object.
      */
-    fun radioButton(block: QRadioButton.() -> Unit): QRadioButton {
+    fun radioButton(block: QRadioButton.() -> Unit): QRadioButton
+    {
         val input = QRadioButton()
+        grid.clean()
         input.block()
         this.add(input, grid)
         return input
@@ -106,11 +116,13 @@ class QForm: JPanel()
      * @param text the text to display on the button.
      * @param block a function that takes a QButton instance and applies the configuration.
      */
-    fun button(text: String,block: QButton.() -> Unit)
+    fun button(text: String,block: QButton.() -> Unit): QButton
     {
         val btn = QButton(text)
+        grid.clean()
         btn.block()
         this.add(btn,grid)
+        return btn
     }
 
     /**
@@ -122,6 +134,7 @@ class QForm: JPanel()
     fun<T> comboBox(block: QComboBox<T>.() -> Unit): QComboBox<T>
     {
         val combo = QComboBox<T>()
+        grid.clean()
         combo.block()
         this.add(combo,grid)
 

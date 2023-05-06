@@ -54,4 +54,16 @@ class QGridConstarints: GridBagConstraints() {
         this.gridx = p.x
         this.gridy = p.y
     }
+
+    fun clean() {
+        this.gridx = RELATIVE
+        this.gridy = RELATIVE
+        this.gridheight = 1
+        this.gridwidth = 1
+        this.fill = NONE
+        this.anchor = CENTER
+        this.ipady = 0
+        this.ipadx = 0
+        this.insets = Insets(0,0,0,0)
+    }
 }
