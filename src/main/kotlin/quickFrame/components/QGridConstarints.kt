@@ -64,6 +64,8 @@ class QGridConstarints: GridBagConstraints() {
         this.anchor = CENTER
         this.ipady = 0
         this.ipadx = 0
+        this.weightx = 0.0
+        this.weighty = 0.0
         this.insets = Insets(0,0,0,0)
     }
 }
