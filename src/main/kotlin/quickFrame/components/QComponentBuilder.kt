@@ -10,6 +10,7 @@ import javax.swing.JComponent
 import javax.swing.JLabel
 import javax.swing.JRadioButton
 import javax.swing.JTextField
+import javax.swing.border.Border
 
 /**
  * QComponentBuilder is a utility class that provides infix methods to set properties to Swing components.
@@ -37,6 +38,8 @@ class QComponentBuilder {
     val center = JLabel.CENTER
     val right = JLabel.RIGHT
     val left = JLabel.LEFT
+
+    private var currentBorder: Border? = null
     /**
      * Sets the background color of this component.
      * @param bg background color (awt.Color)
@@ -122,7 +125,16 @@ class QComponentBuilder {
      *  @param color color for border awt.Color
      */
     infix fun JComponent.lineBorder(color: Color) {
-        this.border = BorderFactory.createLineBorder(color)
+        currentBorder = BorderFactory.createLineBorder(color)
+        this.border = currentBorder
+    }
+
+    /**
+     * Sets a titled border with the given string for its title.
+     *  @param s tile string
+     */
+    infix fun JComponent.titledBorder(s: String) {
+        this.border = BorderFactory.createTitledBorder(currentBorder,s)
     }
 
     /**
