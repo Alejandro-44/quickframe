@@ -153,6 +153,10 @@ class QComponentBuilder {
         this.columns = n
     }
 
+    infix fun JTextField.content(text: String) {
+        this.text = text
+    }
+
     /**
      * Sets the text of this radio button.
      *  @param s text for radio button

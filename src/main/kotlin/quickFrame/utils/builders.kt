@@ -1,6 +1,7 @@
 package quickFrame.utils
 
 import quickFrame.components.QForm
+import quickFrame.components.QFormsGroup
 import quickFrame.containers.QFrame
 
 /**
@@ -25,4 +26,10 @@ fun buildForm(build: QForm.() -> Unit): QForm {
     val form = QForm()
     form.build()
     return form
+}
+
+fun formsGroup(rows: Int, cols: Int, block: QFormsGroup.() -> Unit): QFormsGroup {
+    val group = QFormsGroup(rows, cols)
+    group.block()
+    return group
 }
