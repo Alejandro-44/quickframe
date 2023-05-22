@@ -23,16 +23,82 @@ class QForm: JPanel()
      *The QComponentBuilder instance used to configure the properties of the form and its components.
      */
     private val builder = QComponentBuilder()
+
     /**
      * The QGridConstarints instance used to specify the position and size of components in the form.
      */
     val grid = QGridConstarints()
+
+    /*
+    * Maps of components
+    * */
     private val labels = mutableMapOf<String, JLabel>()
     private val inputs = mutableMapOf<String, JTextField>()
     private val passwords = mutableMapOf<String, JPasswordField>()
     private val buttons = mutableMapOf<String, JButton>()
     private val checkButtons = mutableMapOf<String, JCheckBox>()
     private val radioButtons = mutableMapOf<String, JRadioButton>()
+
+
+    /**
+     * Retrieves the label associated with the given ID.
+     *
+     * @param id The ID of the label to retrieve.
+     * @return The label (JLabel) associated with the provided ID, or null if no label with that ID is found.
+     */
+    fun getLabels(id: String): JLabel? {
+        return this.labels[id]
+    }
+
+    /**
+     * Retrieves the input text field associated with the given ID.
+     *
+     * @param id The ID of the input text field to retrieve.
+     * @return The input text field (JTextField) associated with the provided ID, or null if no text field with that ID is found.
+     */
+    fun getInputText(id: String): JTextField? {
+        return this.inputs[id]
+    }
+
+    /**
+     * Retrieves the password field associated with the given ID.
+     *
+     * @param id The ID of the password field to retrieve.
+     * @return The password field (JPasswordField) associated with the provided ID, or null if no password field with that ID is found.
+     */
+    fun getInputPassword(id: String): JPasswordField? {
+        return this.passwords[id]
+    }
+
+    /**
+     * Retrieves the button associated with the given ID.
+     *
+     * @param id The ID of the button to retrieve.
+     * @return The button (JButton) associated with the provided ID, or null if no button with that ID is found.
+     */
+    fun getButton(id: String): JButton? {
+        return this.buttons[id]
+    }
+
+    /**
+     * Retrieves the radio button associated with the given ID.
+     *
+     * @param id The ID of the radio button to retrieve.
+     * @return The radio button (JRadioButton) associated with the provided ID, or null if no radio button with that ID is found.
+     */
+    fun getRadioButton(id: String): JRadioButton? {
+        return this.radioButtons[id]
+    }
+
+    /**
+     * Retrieves the checkbox associated with the given ID.
+     *
+     * @param id The ID of the checkbox to retrieve.
+     * @return The checkbbox (JCheckBox) associated with the provided ID, or null if no check box with that ID is found.
+     */
+    fun getCheckButton(id: String): JCheckBox? {
+        return this.checkButtons[id]
+    }
 
     /**
      * Configures the properties of the form and its components using the QComponentBuilder instance.
@@ -59,7 +125,6 @@ class QForm: JPanel()
         lab.block()
         this.add(lab, grid)
     }
-
 
 
     /**
@@ -156,29 +221,5 @@ class QForm: JPanel()
         combo.block()
         this.add(combo,grid)
         return combo
-    }
-
-    fun getLabels(id: String): JLabel? {
-        return this.labels[id]
-    }
-
-    fun getInputText(id: String): JTextField? {
-        return this.inputs[id]
-    }
-
-    fun getInputPassword(id: String): JPasswordField? {
-        return this.passwords[id]
-    }
-
-    fun getButton(id: String): JButton? {
-        return this.buttons[id]
-    }
-
-    fun getRadioButton(id: String): JRadioButton? {
-        return this.radioButtons[id]
-    }
-
-    fun getCheckButton(id: String): JCheckBox? {
-        return this.checkButtons[id]
     }
 }

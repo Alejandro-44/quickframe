@@ -28,6 +28,15 @@ fun buildForm(build: QForm.() -> Unit): QForm {
     return form
 }
 
+/**
+ * Creates a group of forms with the specified number of rows and columns,
+ * and allows configuring the group using a DSL-style block.
+ *
+ * @param rows The number of rows in the group.
+ * @param cols The number of columns in the group.
+ * @param block The DSL-style block used to configure the group.
+ * @return The configured QFormsGroup object.
+ */
 fun formsGroup(rows: Int, cols: Int, block: QFormsGroup.() -> Unit): QFormsGroup {
     val group = QFormsGroup(rows, cols)
     group.block()
