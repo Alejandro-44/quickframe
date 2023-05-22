@@ -25,9 +25,9 @@ class QForm: JPanel()
     private val builder = QComponentBuilder()
 
     /**
-     * The QGridConstarints instance used to specify the position and size of components in the form.
+     * The QGridConstraints instance used to specify the position and size of components in the form.
      */
-    val grid = QGridConstarints()
+    val grid = QGridConstraints()
 
     /*
     * Maps of components

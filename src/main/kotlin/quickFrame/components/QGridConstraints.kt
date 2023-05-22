@@ -5,9 +5,9 @@ import java.awt.Insets
 import java.awt.Point
 
 /**
- * The QGridConstarints class extends GridBagConstraints and provides additional methods for setting grid constraints easily.
+ * The QGridConstraints class extends GridBagConstraints and provides additional methods for setting grid constraints easily.
  */
-class QGridConstarints : GridBagConstraints() {
+class QGridConstraints : GridBagConstraints() {
 
     /**
      * Sets the X position of the component in the grid.
