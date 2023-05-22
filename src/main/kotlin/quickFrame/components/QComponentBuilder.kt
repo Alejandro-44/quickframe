@@ -30,9 +30,6 @@ import javax.swing.border.Border
  *  * number of columns for a JTextField
  *  * icon and text for a JRadioButton,
  *  * selected status for a JRadioButton.
- * @author Alejandro Argüello
- * @version 0.1
- * @since 11/04/2023
  */
 class QComponentBuilder {
     val center = JLabel.CENTER

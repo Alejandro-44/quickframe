@@ -1,5 +1,6 @@
 package quickFrame.components
 
+import java.awt.GridBagConstraints
 import java.awt.GridBagLayout
 import javax.swing.*
 
@@ -11,6 +12,12 @@ import javax.swing.*
  */
 class QForm: JPanel()
 {
+    /*
+    * Constants
+    * */
+    val horizontal = GridBagConstraints.HORIZONTAL
+    val vertical = GridBagConstraints.VERTICAL
+
     /**
      * Constructs a new QForm object and sets its layout to GridBagLayout.
      */
