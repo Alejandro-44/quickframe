@@ -159,7 +159,7 @@ class QForm: JPanel()
     {
         require(id !in passwords) {"id \"$id\" already used"}
         val password = QPasswordField()
-        password.name
+        password.name = id
         grid.clean()
         password.block()
         this.add(password, grid)
