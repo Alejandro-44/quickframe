@@ -7,7 +7,7 @@ import javax.swing.JButton
  * It allows the setting of various properties and actions using a builder.
  * @param text the text to display on the button
 */
-class QButton(text: String): JButton(text) {
+class QButton(): JButton() {
 
     /**
      * An instance of [QComponentBuilder] to apply properties to this [QButton].

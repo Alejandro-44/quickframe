@@ -203,10 +203,10 @@ class QForm: JPanel()
      * @param text the text to display on the button.
      * @param block a function that takes a QButton instance and applies the configuration.
      */
-    fun button(id: String, text: String,block: QButton.() -> Unit)
+    fun button(id: String,block: QButton.() -> Unit)
     {
         require(id !in buttons) {"id \"$id\" already used"}
-        val btn = QButton(text)
+        val btn = QButton()
         btn.name = id
         grid.clean()
         btn.block()
