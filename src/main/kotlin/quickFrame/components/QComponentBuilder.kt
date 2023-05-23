@@ -4,12 +4,7 @@ import java.awt.Color
 import java.awt.Dimension
 import java.awt.Font
 import java.awt.LayoutManager
-import javax.swing.BorderFactory
-import javax.swing.Icon
-import javax.swing.JComponent
-import javax.swing.JLabel
-import javax.swing.JRadioButton
-import javax.swing.JTextField
+import javax.swing.*
 import javax.swing.border.Border
 
 /**
@@ -142,6 +137,7 @@ class QComponentBuilder {
         this.horizontalAlignment = op
     }
 
+
     /**
      * Sets the number of columns for this text field.
      *  @param n number of columns
@@ -154,20 +150,16 @@ class QComponentBuilder {
         this.text = text
     }
 
+    infix fun AbstractButton.icon(url: String) {
+        this.icon = ImageIcon(url)
+    }
+
     /**
      * Sets the text of this radio button.
      *  @param s text for radio button
      */
-    infix fun JRadioButton.text(s: String) {
+    infix fun AbstractButton.text(s: String) {
         this.text = s
-    }
-
-    /**
-     * Sets the icon of this radio button.
-     * @param i icon for radio button
-     */
-    infix fun JRadioButton.icon(i: Icon) {
-        this.icon = i
     }
 
     /**
