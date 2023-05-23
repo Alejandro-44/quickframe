@@ -18,7 +18,7 @@ class QLabel(text: String): JLabel(text) {
      * Sets the horizontal alignment of the text of this label.
      *  @param op an option from JLabel constants
      */
-    infix fun JLabel.aligntext(op: Int) {
+    infix fun aligntext(op: Int) {
         this.horizontalAlignment = op
     }
 
@@ -26,7 +26,7 @@ class QLabel(text: String): JLabel(text) {
      * Sets the horizontal alignment of the text of this label.
      *  @param op an option from JLabel constants
      */
-    infix fun JLabel.icon(url: String) {
+    infix fun icon(url: String) {
         this.icon = ImageIcon(url)
     }
 
