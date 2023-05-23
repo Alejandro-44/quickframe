@@ -23,7 +23,7 @@ val form = buildForm {
         it background Color(200,200,200)
     }
 
-    label("My First QuickForm") {
+    label("title","My First QuickForm") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 35)
             it color Color(90, 90, 90)
@@ -33,7 +33,7 @@ val form = buildForm {
         grid margin Insets(10,10, 0, 10)
     }
 
-    label("Name") {
+    label("lblName","Name") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
@@ -42,7 +42,7 @@ val form = buildForm {
         grid margin Insets(10, 10, 0, 0)
     }
 
-    val nameField = textInput {
+    textInput("inName") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
@@ -53,7 +53,7 @@ val form = buildForm {
         grid margin Insets(10, 10, 0, 10)
     }
 
-    label("Password") {
+    label("lblPassword","Password") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
@@ -62,7 +62,7 @@ val form = buildForm {
         grid margin Insets(10, 10, 0 ,0)
     }
 
-    val passwordField = password {
+    passwordInput("inPassword") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
@@ -73,7 +73,7 @@ val form = buildForm {
         grid margin Insets(10, 10, 0, 10)
     }
 
-    button("Send") {
+    button("btnSend","Send") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
         }
@@ -82,8 +82,8 @@ val form = buildForm {
         grid fill GridBagConstraints.HORIZONTAL
         grid margin Insets(10, 10, 0, 10)
         onClick {
-            nameField.text = ""
-            passwordField.text = ""
+            getInputText("inName")?.text = ""
+            getInputPassword("inPassword")?.text = ""
         }
     }
 }
@@ -135,7 +135,7 @@ val form = buildForm {
     properties {
         it background Color(200, 200, 200)
     }
-    label("Name") {
+    label("lblName","Name") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
@@ -144,7 +144,7 @@ val form = buildForm {
         grid margin Insets(10, 10, 0, 0)
     }
 
-    val nameField = textInput {
+    textInput("inName") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
