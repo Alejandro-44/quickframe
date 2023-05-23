@@ -1,5 +1,6 @@
 package quickFrame.components
 
+import javax.swing.ImageIcon
 import javax.swing.JLabel
 
 /**
@@ -12,6 +13,22 @@ class QLabel(text: String): JLabel(text) {
      * An instance of [QComponentBuilder] to apply properties to this [QLabel].
      */
     private val builder = QComponentBuilder()
+
+    /**
+     * Sets the horizontal alignment of the text of this label.
+     *  @param op an option from JLabel constants
+     */
+    infix fun JLabel.aligntext(op: Int) {
+        this.horizontalAlignment = op
+    }
+
+    /**
+     * Sets the horizontal alignment of the text of this label.
+     *  @param op an option from JLabel constants
+     */
+    infix fun JLabel.icon(url: String) {
+        this.icon = ImageIcon(url)
+    }
 
     /**
      * Applies a [block] of [QComponentBuilder] properties to this [QLabel].

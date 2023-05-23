@@ -129,14 +129,6 @@ class QComponentBuilder {
         this.border = BorderFactory.createTitledBorder(currentBorder,s)
     }
 
-    /**
-     * Sets the horizontal alignment of the text of this label.
-     *  @param op an option from JLabel constants
-     */
-    infix fun JLabel.aligntext(op: Int) {
-        this.horizontalAlignment = op
-    }
-
 
     /**
      * Sets the number of columns for this text field.
@@ -146,10 +138,20 @@ class QComponentBuilder {
         this.columns = n
     }
 
+    /**
+     * Sets the content (text) of a JTextField.
+     *
+     * @param text The text content.
+     */
     infix fun JTextField.content(text: String) {
         this.text = text
     }
 
+    /**
+     * Sets the icon of an AbstractButton.
+     *
+     * @param url The URL of the icon image.
+     */
     infix fun AbstractButton.icon(url: String) {
         this.icon = ImageIcon(url)
     }
