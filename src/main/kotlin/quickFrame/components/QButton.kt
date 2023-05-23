@@ -23,14 +23,6 @@ class QButton(): JButton() {
     fun properties(block: QComponentBuilder.(QButton) -> Unit) {
         builder.block(this)
     }
-
-    /**
-     * Sets the text of the button.
-     * @param s the text to set
-     */
-    infix fun content(s: String) {
-        this.text = s
-    }
     
     /**
      * Sets an action to be performed when the button is clicked.
