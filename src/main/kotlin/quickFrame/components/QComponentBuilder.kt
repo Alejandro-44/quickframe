@@ -148,6 +148,14 @@ class QComponentBuilder {
     }
 
     /**
+     * Sets whether this component is editable or non-editable.
+     * @param b set if is editable or not
+     */
+    infix fun JTextField.editable(b: Boolean) {
+        this.isEditable = b
+    }
+
+    /**
      * Sets the icon of an AbstractButton.
      *
      * @param url The URL of the icon image.

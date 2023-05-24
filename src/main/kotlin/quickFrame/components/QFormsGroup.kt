@@ -5,10 +5,12 @@ import javax.swing.JPanel
 
 class QFormsGroup(
     rows: Int,
-    cols: Int): JPanel() {
+    cols: Int,
+    hgap: Int,
+    vgap: Int): JPanel() {
 
     init {
-        this.layout = GridLayout(rows, cols)
+        this.layout = GridLayout(rows, cols, hgap, vgap)
     }
 
     /**
@@ -24,7 +26,4 @@ class QFormsGroup(
         builder.block(this)
     }
 
-    infix fun addForm(form: QForm) {
-        this.add(form)
-    }
 }
