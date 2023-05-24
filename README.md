@@ -73,9 +73,10 @@ val form = buildForm {
         grid margin Insets(10, 10, 0, 10)
     }
 
-    button("btnSend","Send") {
+    button("btnSend") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
+            it text "Send"
         }
         grid position Point(0,3)
         grid spanX 2
@@ -133,28 +134,38 @@ For this you use `buildForm` function that returns a `QForm` instance.
 ```kotlin
 val form = buildForm {
     properties {
+        // background color
         it background Color(200, 200, 200)
     }
+    
+    // adding label component
     label("lblName","Name") {
+        //properties for label component
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
         }
+        //position in layout
         grid position Point(0,1)
+        //margin in layout
         grid margin Insets(10, 10, 0, 0)
     }
-
+    
+    // adding text field component
     textInput("inName") {
+        //properties for text field component
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
         }
+        //position in layout
         grid position Point(1, 1)
-        grid fill GridBagConstraints.HORIZONTAL
+        grid fill horizontal
         grid weightX 1.0
         grid margin Insets(10, 10, 0, 10)
     }
 }
 ```
+
 
 ## Tutorial
