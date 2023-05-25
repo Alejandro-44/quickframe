@@ -118,14 +118,13 @@ class QForm: JPanel()
 
     /**
      * Adds a QLabel to the form with the specified text and applies the specified configuration.
-     * @param text the text to display on the label.
      * @param block a function that takes a QLabel instance and applies the configuration.
      * @return the created QLabel object.
      */
-    fun label(id: String, text: String, block: QLabel.() -> Unit)
+    fun label(id: String, block: QLabel.() -> Unit)
     {
         require(id !in labels) {"id \"$id\" already used"}
-        val lab = QLabel(text)
+        val lab = QLabel("")
         lab.name = id
         labels[lab.name] = lab
         grid.clean()

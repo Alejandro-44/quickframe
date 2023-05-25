@@ -1,5 +1,6 @@
 package quickFrame.components
 
+import jdk.incubator.vector.VectorOperators.Test
 import javax.swing.ImageIcon
 import javax.swing.JLabel
 
@@ -13,6 +14,15 @@ class QLabel(text: String): JLabel(text) {
      * An instance of [QComponentBuilder] to apply properties to this [QLabel].
      */
     private val builder = QComponentBuilder()
+
+    /**
+     * Sets the content (text) of a JTextField.
+     *
+     * @param text The text content.
+     */
+    infix fun text(text: String) {
+        this.text = text
+    }
 
     /**
      * Sets the horizontal alignment of the text of this label.
