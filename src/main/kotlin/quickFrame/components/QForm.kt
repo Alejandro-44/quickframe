@@ -118,8 +118,10 @@ class QForm: JPanel()
 
     /**
      * Adds a QLabel to the form with the specified text and applies the specified configuration.
-     * @param block a function that takes a QLabel instance and applies the configuration.
-     * @return the created QLabel object.
+     *
+     * @param id The unique identifier for the QLabel.
+     * @param block A function that takes a QLabel instance and applies the configuration.
+     * @return The created QLabel object.
      */
     fun label(id: String, block: QLabel.() -> Unit)
     {
@@ -132,11 +134,12 @@ class QForm: JPanel()
         this.add(lab, grid)
     }
 
-
     /**
      * Adds a QTextField to the form and applies the specified configuration.
-     * @param block a function that takes a QTextField instance and applies the configuration.
-     * @return the created QTextField object.
+     *
+     * @param id The unique identifier for the QTextField.
+     * @param block A function that takes a QTextField instance and applies the configuration.
+     * @return The created QTextField object.
      */
     fun textInput(id: String, block: QTextField.() -> Unit)
     {
@@ -151,8 +154,10 @@ class QForm: JPanel()
 
     /**
      * Adds a QPasswordField to the form and applies the specified configuration.
-     * @param block a function that takes a QPasswordField instance and applies the configuration.
-     * @return the created QPasswordField object.
+     *
+     * @param id The unique identifier for the QPasswordField.
+     * @param block A function that takes a QPasswordField instance and applies the configuration.
+     * @return The created QPasswordField object.
      */
     fun passwordInput(id: String, block: QPasswordField.() -> Unit)
     {
@@ -167,8 +172,10 @@ class QForm: JPanel()
 
     /**
      * Adds a QCheckBox to the form and applies the specified configuration.
-     * @param block a function that takes a QCheckBox instance and applies the configuration.
-     * @return the created QCheckBox object.
+     *
+     * @param id The unique identifier for the QCheckBox.
+     * @param block A function that takes a QCheckBox instance and applies the configuration.
+     * @return The created QCheckBox object.
      */
     fun checkbox(id: String, block: QCheckBox.() -> Unit)
     {
@@ -182,9 +189,11 @@ class QForm: JPanel()
     }
 
     /**
-     * Adds a QRadioButton to the form and applies the specified configuration.
-     * @param block a function that takes a QRadioButton instance and applies the configuration.
-     * @return the created QRadioButton object.
+     * Adds a [QRadioButton] to the form and applies the specified configuration.
+     *
+     * @param id The unique identifier for the [QRadioButton].
+     * @param block A function that takes a [QRadioButton] instance and applies the configuration.
+     * @return The created QRadioButton object.
      */
     fun radioButton(id: String, block: QRadioButton.() -> Unit)
     {
@@ -198,9 +207,10 @@ class QForm: JPanel()
     }
 
     /**
-     * Adds a QButton to the form with the specified text and applies the specified configuration.
-     * @param text the text to display on the button.
-     * @param block a function that takes a QButton instance and applies the configuration.
+     * Adds a [QButton] to the form with the specified text and applies the specified configuration.
+     *
+     * @param id The unique identifier for the [QButton].
+     * @param block A function that takes a [QButton] instance and applies the configuration.
      */
     fun button(id: String,block: QButton.() -> Unit)
     {
@@ -214,10 +224,12 @@ class QForm: JPanel()
     }
 
     /**
-     * Creates and adds a new instance of QComboBox to the QForm panel, and applies the properties defined in the given
-     * block to the component. The QComboBox allows users to select one item from a dropdown list.
-     * @param block a lambda expression that sets the properties of the QComboBox using a QComboBox builder object.
-     * @return the newly created and added QComboBox instance.
+     * Creates and adds a new instance of QComboBox to the QForm panel, and applies the properties defined in the given block
+     * to the component. The QComboBox allows users to select one item from a dropdown list.
+     *
+     * @param id The unique identifier for the QComboBox.
+     * @param block A lambda expression that sets the properties of the QComboBox using a QComboBox builder object.
+     * @return The newly created and added QComboBox instance.
      */
     fun<T> comboBox(id: String, block: QComboBox<T>.() -> Unit): QComboBox<T>
     {
