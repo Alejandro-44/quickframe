@@ -139,9 +139,11 @@ val form = buildForm {
     }
     
     // adding label component
-    label("lblName","Name") {
+    label("lblName") // label id 
+    {
         //properties for label component
         properties {
+            it text "Name"
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
             it color Color(90, 90, 90)
         }
@@ -152,7 +154,8 @@ val form = buildForm {
     }
     
     // adding text field component
-    textInput("inName") {
+    textInput("inName") // text input id
+    {
         //properties for text field component
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
@@ -167,5 +170,24 @@ val form = buildForm {
 }
 ```
 
+To add components to the form, you must invoke methods that have 
+the same name as the component you want to add. In this DSL you 
+can use the following methods:
+
+| Function        | Component adding                                                                           |
+|-----------------|--------------------------------------------------------------------------------------------|
+| `label`         | Add a `QLabel` instance, the component where you can add text or images-                   |
+| `textInput`     | Add a `QTextField` instance, you use this component to receive input data from the user.   |
+| `passwordInput` | Add a `QPasswordField` instance, you use this component to receive passwords from user.    |
+| `checkbox`      | Add a `QCheckBox` instance, you use this component to create lists of options.             |
+| `radioButton`   | Add a `QRadioButton` instance, you use this component to create lists of options.          |
+| `button`        | Add a `QButton` instance, you use this component to create and execute events on the frame |
+| `comboBox`      | Add a `QComboBox` instance, you use this component to create drop-down lists options.      |
+
+For each component, you must define its id, a unique identifier to refer to the component later on. 
+Next, you need to open branches and invoke the properties method. Here, you can define various attributes for the component. 
+Additionally, you must specify its position within the QForm layout using the grid object and a Point object from Java's AWS library. 
+The default layout for QForm is GridBagLayout from Java, so you should define the position as you would refer to positions in a matrix. 
+Moreover, you can define additional properties for the component in the layout, such as weight, span, fill, etc
 
 ## Tutorial
