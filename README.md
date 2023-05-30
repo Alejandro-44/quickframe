@@ -23,20 +23,20 @@ val form = buildForm {
         it background Color(200,200,200)
     }
 
-    label("title","My First QuickForm") {
+    label("title") {
         properties {
+            it text "My First QuickFrame"
             it fontFamily Font(Font.DIALOG, Font.BOLD, 35)
-            it color Color(90, 90, 90)
         }
         grid position Point(0,0)
         grid spanX 2
         grid margin Insets(10,10, 0, 10)
     }
 
-    label("lblName","Name") {
+    label("lblName") {
         properties {
+            it text "Name"
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
-            it color Color(90, 90, 90)
         }
         grid position Point(0,1)
         grid margin Insets(10, 10, 0, 0)
@@ -45,7 +45,6 @@ val form = buildForm {
     textInput("inName") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
-            it color Color(90, 90, 90)
         }
         grid position Point(1, 1)
         grid fill GridBagConstraints.HORIZONTAL
@@ -53,10 +52,10 @@ val form = buildForm {
         grid margin Insets(10, 10, 0, 10)
     }
 
-    label("lblPassword","Password") {
+    label("lblPassword") {
         properties {
+            it text "Password"
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
-            it color Color(90, 90, 90)
         }
         grid position Point(0, 2)
         grid margin Insets(10, 10, 0 ,0)
@@ -65,7 +64,6 @@ val form = buildForm {
     passwordInput("inPassword") {
         properties {
             it fontFamily Font(Font.DIALOG, Font.BOLD, 25)
-            it color Color(90, 90, 90)
         }
         grid position Point(1, 2)
         grid fill GridBagConstraints.HORIZONTAL

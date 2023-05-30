@@ -1,13 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="QuickFrame:jar">
+  <artifact type="jar" build-on-make="true" name="QuickFrame:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/QuickFrame_jar</output-path>
     <root id="archive" name="QuickFrame.jar">
       <element id="module-output" name="QuickFrame" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.0/kotlin-stdlib-jdk8-1.8.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.8.0/kotlin-stdlib-1.8.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.0/kotlin-stdlib-common-1.8.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.0/kotlin-stdlib-jdk7-1.8.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
