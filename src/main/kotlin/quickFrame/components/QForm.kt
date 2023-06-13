@@ -39,21 +39,21 @@ class QForm: JPanel()
     /*
     * Maps of components
     * */
-    private val labels = mutableMapOf<String, JLabel>()
-    private val inputs = mutableMapOf<String, JTextField>()
-    private val passwords = mutableMapOf<String, JPasswordField>()
-    private val buttons = mutableMapOf<String, JButton>()
-    private val checkButtons = mutableMapOf<String, JCheckBox>()
-    private val radioButtons = mutableMapOf<String, JRadioButton>()
+    private val labels = mutableMapOf<String, QLabel>()
+    private val inputs = mutableMapOf<String, QTextField>()
+    private val passwords = mutableMapOf<String, QPasswordField>()
+    private val buttons = mutableMapOf<String, QButton>()
+    private val checkButtons = mutableMapOf<String, QCheckBox>()
+    private val radioButtons = mutableMapOf<String, QRadioButton>()
 
 
     /**
      * Retrieves the label associated with the given ID.
      *
      * @param id The ID of the label to retrieve.
-     * @return The label (JLabel) associated with the provided ID, or null if no label with that ID is found.
+     * @return The label [QLabel] associated with the provided ID, or null if no label with that ID is found.
      */
-    fun getLabels(id: String): JLabel? {
+    fun getLabels(id: String): QLabel? {
         return this.labels[id]
     }
 
@@ -61,9 +61,9 @@ class QForm: JPanel()
      * Retrieves the input text field associated with the given ID.
      *
      * @param id The ID of the input text field to retrieve.
-     * @return The input text field (JTextField) associated with the provided ID, or null if no text field with that ID is found.
+     * @return The input text field [QTextField] associated with the provided ID, or null if no text field with that ID is found.
      */
-    fun getInputText(id: String): JTextField? {
+    fun getInputText(id: String): QTextField? {
         return this.inputs[id]
     }
 
@@ -71,9 +71,9 @@ class QForm: JPanel()
      * Retrieves the password field associated with the given ID.
      *
      * @param id The ID of the password field to retrieve.
-     * @return The password field (JPasswordField) associated with the provided ID, or null if no password field with that ID is found.
+     * @return The password field [QPasswordField] associated with the provided ID, or null if no password field with that ID is found.
      */
-    fun getInputPassword(id: String): JPasswordField? {
+    fun getInputPassword(id: String): QPasswordField? {
         return this.passwords[id]
     }
 
@@ -81,9 +81,9 @@ class QForm: JPanel()
      * Retrieves the button associated with the given ID.
      *
      * @param id The ID of the button to retrieve.
-     * @return The button (JButton) associated with the provided ID, or null if no button with that ID is found.
+     * @return The button [QButton] associated with the provided ID, or null if no button with that ID is found.
      */
-    fun getButton(id: String): JButton? {
+    fun getButton(id: String): QButton? {
         return this.buttons[id]
     }
 
@@ -91,9 +91,9 @@ class QForm: JPanel()
      * Retrieves the radio button associated with the given ID.
      *
      * @param id The ID of the radio button to retrieve.
-     * @return The radio button (JRadioButton) associated with the provided ID, or null if no radio button with that ID is found.
+     * @return The radio button [QRadioButton] associated with the provided ID, or null if no radio button with that ID is found.
      */
-    fun getRadioButton(id: String): JRadioButton? {
+    fun getRadioButton(id: String): QRadioButton? {
         return this.radioButtons[id]
     }
 
@@ -101,9 +101,9 @@ class QForm: JPanel()
      * Retrieves the checkbox associated with the given ID.
      *
      * @param id The ID of the checkbox to retrieve.
-     * @return The checkbbox (JCheckBox) associated with the provided ID, or null if no check box with that ID is found.
+     * @return The checkbbox [QCheckBox] associated with the provided ID, or null if no check box with that ID is found.
      */
-    fun getCheckButton(id: String): JCheckBox? {
+    fun getCheckButton(id: String): QCheckBox? {
         return this.checkButtons[id]
     }
 
