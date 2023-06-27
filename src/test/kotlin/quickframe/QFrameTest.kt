@@ -1,7 +1,7 @@
-package quickFrame
+package quickframe
 
 import org.junit.jupiter.api.Test
-import quickFrame.utils.buildFrame
+import quickframe.utils.buildFrame
 import java.awt.Dimension
 
 class QFrameTest {

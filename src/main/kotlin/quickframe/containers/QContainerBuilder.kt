@@ -1,4 +1,4 @@
-package quickFrame.containers;
+package quickframe.containers;
 
 import java.awt.Dimension;
 import java.awt.LayoutManager;

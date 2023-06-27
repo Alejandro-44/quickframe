@@ -1,4 +1,4 @@
-package quickFrame.components
+package quickframe.components
 
 import javax.swing.JButton
 

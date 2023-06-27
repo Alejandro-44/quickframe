@@ -1,4 +1,4 @@
-package quickFrame.utils
+package quickframe.utils
 
 import java.awt.Component
 import javax.swing.JOptionPane

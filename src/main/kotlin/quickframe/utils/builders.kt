@@ -1,8 +1,8 @@
-package quickFrame.utils
+package quickframe.utils
 
-import quickFrame.components.QForm
-import quickFrame.components.QFormsGroup
-import quickFrame.containers.QFrame
+import quickframe.components.QForm
+import quickframe.components.QFormsGroup
+import quickframe.containers.QFrame
 
 /**
  * Creates and returns a QFrame instance with the specified build instructions.

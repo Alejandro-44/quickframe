@@ -1,4 +1,4 @@
-package quickFrame.containers
+package quickframe.containers
 
 import java.awt.BorderLayout
 import java.awt.Component

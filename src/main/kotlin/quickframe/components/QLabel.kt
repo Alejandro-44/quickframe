@@ -1,6 +1,5 @@
-package quickFrame.components
+package quickframe.components
 
-import jdk.incubator.vector.VectorOperators.Test
 import javax.swing.ImageIcon
 import javax.swing.JLabel
 

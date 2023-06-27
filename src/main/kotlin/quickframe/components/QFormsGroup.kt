@@ -1,4 +1,4 @@
-package quickFrame.components
+package quickframe.components
 
 import java.awt.GridLayout
 import javax.swing.JPanel
