@@ -173,6 +173,14 @@ class QComponentBuilder {
     }
 
     /**
+     * Sets whether this button is enabled or disabled.
+     * @param b set if is enabled or not
+     */
+    infix fun AbstractButton.enable(b: Boolean) {
+        this.isEnabled = b
+    }
+
+    /**
      * Sets whether this radio button is selected or not.
      * @param b
      */
