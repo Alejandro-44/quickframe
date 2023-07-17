@@ -2,7 +2,7 @@ package quickframe.components
 
 import java.awt.GridBagConstraints
 import java.awt.GridBagLayout
-import javax.swing.*
+import javax.swing.JPanel
 
 /**
  * QForm is a subclass of JPanel and provides a layout for creating forms using GridBagLayout.
@@ -53,7 +53,8 @@ class QForm: JPanel()
      * @param id The ID of the label to retrieve.
      * @return The label [QLabel] associated with the provided ID, or null if no label with that ID is found.
      */
-    fun getLabels(id: String): QLabel? {
+    fun getLabels(id: String): QLabel?
+    {
         return this.labels[id]
     }
 
@@ -63,7 +64,8 @@ class QForm: JPanel()
      * @param id The ID of the input text field to retrieve.
      * @return The input text field [QTextField] associated with the provided ID, or null if no text field with that ID is found.
      */
-    fun getInputText(id: String): QTextField? {
+    fun getInputText(id: String): QTextField?
+    {
         return this.inputs[id]
     }
 
@@ -73,7 +75,8 @@ class QForm: JPanel()
      * @param id The ID of the password field to retrieve.
      * @return The password field [QPasswordField] associated with the provided ID, or null if no password field with that ID is found.
      */
-    fun getInputPassword(id: String): QPasswordField? {
+    fun getInputPassword(id: String): QPasswordField?
+    {
         return this.passwords[id]
     }
 
@@ -83,7 +86,8 @@ class QForm: JPanel()
      * @param id The ID of the button to retrieve.
      * @return The button [QButton] associated with the provided ID, or null if no button with that ID is found.
      */
-    fun getButton(id: String): QButton? {
+    fun getButton(id: String): QButton?
+    {
         return this.buttons[id]
     }
 
@@ -93,7 +97,8 @@ class QForm: JPanel()
      * @param id The ID of the radio button to retrieve.
      * @return The radio button [QRadioButton] associated with the provided ID, or null if no radio button with that ID is found.
      */
-    fun getRadioButton(id: String): QRadioButton? {
+    fun getRadioButton(id: String): QRadioButton?
+    {
         return this.radioButtons[id]
     }
 
@@ -103,7 +108,8 @@ class QForm: JPanel()
      * @param id The ID of the checkbox to retrieve.
      * @return The checkbbox [QCheckBox] associated with the provided ID, or null if no check box with that ID is found.
      */
-    fun getCheckButton(id: String): QCheckBox? {
+    fun getCheckButton(id: String): QCheckBox?
+    {
         return this.checkButtons[id]
     }
 
@@ -121,7 +127,6 @@ class QForm: JPanel()
      *
      * @param id The unique identifier for the QLabel.
      * @param block A function that takes a QLabel instance and applies the configuration.
-     * @return The created QLabel object.
      */
     fun label(id: String, block: QLabel.() -> Unit)
     {
@@ -139,7 +144,6 @@ class QForm: JPanel()
      *
      * @param id The unique identifier for the QTextField.
      * @param block A function that takes a QTextField instance and applies the configuration.
-     * @return The created QTextField object.
      */
     fun textInput(id: String, block: QTextField.() -> Unit)
     {
@@ -157,7 +161,6 @@ class QForm: JPanel()
      *
      * @param id The unique identifier for the QPasswordField.
      * @param block A function that takes a QPasswordField instance and applies the configuration.
-     * @return The created QPasswordField object.
      */
     fun passwordInput(id: String, block: QPasswordField.() -> Unit)
     {
@@ -175,7 +178,6 @@ class QForm: JPanel()
      *
      * @param id The unique identifier for the QCheckBox.
      * @param block A function that takes a QCheckBox instance and applies the configuration.
-     * @return The created QCheckBox object.
      */
     fun checkbox(id: String, block: QCheckBox.() -> Unit)
     {
@@ -193,7 +195,6 @@ class QForm: JPanel()
      *
      * @param id The unique identifier for the [QRadioButton].
      * @param block A function that takes a [QRadioButton] instance and applies the configuration.
-     * @return The created QRadioButton object.
      */
     fun radioButton(id: String, block: QRadioButton.() -> Unit)
     {
@@ -229,7 +230,6 @@ class QForm: JPanel()
      *
      * @param id The unique identifier for the QComboBox.
      * @param block A lambda expression that sets the properties of the QComboBox using a QComboBox builder object.
-     * @return The newly created and added QComboBox instance.
      */
     fun<T> comboBox(id: String, block: QComboBox<T>.() -> Unit): QComboBox<T>
     {

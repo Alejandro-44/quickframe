@@ -4,7 +4,10 @@ import java.awt.Color
 import java.awt.Dimension
 import java.awt.Font
 import java.awt.LayoutManager
-import javax.swing.*
+import javax.swing.JComponent
+import javax.swing.AbstractButton
+import javax.swing.BorderFactory
+import javax.swing.ImageIcon
 import javax.swing.border.Border
 
 /**
@@ -27,9 +30,6 @@ import javax.swing.border.Border
  *  * selected status for a JRadioButton.
  */
 class QComponentBuilder {
-    val center = JLabel.CENTER
-    val right = JLabel.RIGHT
-    val left = JLabel.LEFT
 
     private var currentBorder: Border? = null
     /**
@@ -129,32 +129,6 @@ class QComponentBuilder {
         this.border = BorderFactory.createTitledBorder(currentBorder,s)
     }
 
-
-    /**
-     * Sets the number of columns for this text field.
-     *  @param n number of columns
-     */
-    infix fun JTextField.columns(n: Int) {
-        this.columns = n
-    }
-
-    /**
-     * Sets the content (text) of a JTextField.
-     *
-     * @param text The text content.
-     */
-    infix fun JTextField.content(text: String) {
-        this.text = text
-    }
-
-    /**
-     * Sets whether this component is editable or non-editable.
-     * @param b set if is editable or not
-     */
-    infix fun JTextField.editable(b: Boolean) {
-        this.isEditable = b
-    }
-
     /**
      * Sets the icon of an AbstractButton.
      *
@@ -180,11 +154,4 @@ class QComponentBuilder {
         this.isEnabled = b
     }
 
-    /**
-     * Sets whether this radio button is selected or not.
-     * @param b
-     */
-    infix fun JRadioButton.selected(b: Boolean) {
-        this.isSelected = b
-    }
 }

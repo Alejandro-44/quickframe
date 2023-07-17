@@ -9,6 +9,10 @@ import javax.swing.JLabel
  * @param text the text to display on the label
  */
 class QLabel(text: String): JLabel(text) {
+    val center = CENTER
+    val right = RIGHT
+    val left = LEFT
+
     /**
      * An instance of [QComponentBuilder] to apply properties to this [QLabel].
      */

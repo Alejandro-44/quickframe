@@ -15,14 +15,6 @@ class QButton(): JButton() {
     private val builder = QComponentBuilder()
 
     /**
-     * Applies a [block] of [QComponentBuilder] properties to this [QButton].
-     * @param block a lambda expression with a receiver of type [QComponentBuilder].
-     */
-    fun properties(block: QComponentBuilder.(QButton) -> Unit) {
-        builder.block(this)
-    }
-    
-    /**
      * Sets an action to be performed when the button is clicked.
      * @param action a lambda expression that defines the action to be performed when the button is clicked.
      */
@@ -31,4 +23,13 @@ class QButton(): JButton() {
             action()
         }
     }
+
+    /**
+     * Applies a [block] of [QComponentBuilder] properties to this [QButton].
+     * @param block a lambda expression with a receiver of type [QComponentBuilder].
+     */
+    fun properties(block: QComponentBuilder.(QButton) -> Unit) {
+        builder.block(this)
+    }
+
 }

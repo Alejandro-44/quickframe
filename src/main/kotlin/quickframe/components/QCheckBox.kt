@@ -14,6 +14,14 @@ class QCheckBox: JCheckBox() {
     private val builder = QComponentBuilder()
 
     /**
+     * Sets whether this radio button is selected or not.
+     * @param b
+     */
+    infix fun selected(b: Boolean) {
+        this.isSelected = b
+    }
+
+    /**
      * Applies a [block] of [QComponentBuilder] properties to this [QCheckBox].
      * @param block a lambda expression with a receiver of type [QComponentBuilder].
      */
