@@ -261,7 +261,7 @@ By default, frame has `BorderLayout` and it works as follows:
 ![](/docs/images/BorderLayoutTutorial.png)
 
 You can use methods from `QFrame` that add components in its respective areas, those methods are: `addToTop`,
-`addToCenter`, `addToBottom`, `addToRight` and `addToLeft`, each one receive a component.
+`addToCenter`, `addToBottom`, `addToRight` and `addToLeft`, each one receives a component.
 Whe you add a component on this layout, it will cover all available space.
 
 ```kotlin
@@ -492,7 +492,7 @@ The next step in our tutorial is to build the main section of the GUI.
 
 ![](/docs/images/tutorialMain1.png)
 
-You can think the main section is subdivided in 4 forms, and each one is equals to the other.
+You can think the main section is subdivided in four forms, and each one is equals to the other.
 So, to build the main section, you are going to use a feature from this DSL, the form template.
 To create a template you use `buildTemplate` function from `utils.builders`. A template lets us 
 build a structure for a form that you could use in multiple forms.
@@ -516,7 +516,7 @@ val truckPaneTemplate = buildTemplate {
             it icon "./data/images/emptyTruck.png"
         }
         grid position Point(0,0) 
-        grid spanY 4 //image covers 4 rows in grid
+        grid spanY 4 //image covers four rows in grid
         grid weightX 0.5 
         grid fill horizontal
     }
@@ -709,7 +709,7 @@ val mainGroup = formsGroup(2, 2, 5, 5) {
 ```
 
 The last section you have to build on this tutorial is the options.
-The options section consists of four buttons, then to build it you have to create a form with 4 buttons
+The options section consists of four buttons, then to build it you have to create a form with four buttons
 
 ![](/docs/images/tutorialButtons.png)
 
@@ -774,3 +774,84 @@ fun main() {
 ```
 
 ### Events
+
+To add events in QuickFrame, we have to use the Button component.
+In this version buttons are the only component receives events, specifically on click. 
+But before, you must add the basic information for interaction of the GUI.
+In each case you are going to create a new function to call them later.
+So, first you must create a new instance of
+`TransportCompany` in the project:
+
+```kotlin
+val transportCompany = TransportCompany()
+```
+
+Now on the information pane, you can load information of the total
+load and the average load of the trucks. We can extract the information from the transport company object directly and put it in the inputs of information.
+For this, you can access to an input component with `getInputText` method and pass ID of the component as argument.
+Then, you use `text` property to assign the text of that input. So, in the transport company object you can get
+the information using `getTotalLoad` and `getAverageLoad` methods.
+
+```kotlin
+/*
+* ------------------------- LOAD DATA -----------------------------
+* */
+fun addInformation() {
+    informationPane.getInputText("inTotalLoad")!!.text = transportCompany.getTotalLoad().toString() + " Kg"
+    informationPane.getInputText("inAverageLoad")!!.text = transportCompany.getAverageLoad().toString() + " Kg"
+}
+
+```
+
+After you have to load information for each truck panel. Firstly, you can store all truck panels in an array.
+Then, you can use the same process you use before to add information to the information pane, but in this case
+you can access to each truck of the company using the `trucks` property that contains each truck object from
+the company. So, using a cycle you can put the information effectly.
+
+```kotlin
+val truckPanes = arrayOf(truckPaneA, truckPaneB, truckPaneC, truckPaneD)
+fun addTrucks() {
+    for (i in 0 until 4) {
+        val pane = truckPanes[i]
+        pane.getInputText("inLicensePlate")!!.text = transportCompany.trucks[i].licensePlate
+        pane.getInputText("inCapacity")!!.text = transportCompany.trucks[i].capacity.toString() + " Kg"
+        pane.getInputText("inConsumption")!!.text = transportCompany.trucks[i].consumption.toString() + " gal/km"
+        pane.getInputText("inLoad")!!.text = transportCompany.trucks[i].currentLoad.toString() + " Kg"
+    }
+}
+```
+
+Now comes the longest task, create the events and actions. 
+
+```kotlin
+/*
+* ------------------------- LOAD EVENTS ----------------------------
+* */
+
+
+fun configurateEvents() {
+    for (i in 0 until 4) {
+        val buttonPane = buttonPanes[i]
+        val truck = transportCompany.trucks[i]
+        val pane = truckPanes[i]
+        buttonPane.getButton("btnLoad")!!.onClick {
+            val weight = inputMessage(null, "Load").toInt()
+            transportCompany.loadTruck(pane.getInputText("inLicensePlate")!!.text, weight)
+            pane.getLabels("imgTruck")!!.icon("./data/images/loadedTruck.png")
+            pane.getInputText("inLoad")!!.text = truck.currentLoad.toString() + " kg"
+            addInformation()
+            buttonPane.getButton("btnLoad")!!.isEnabled = false
+            buttonPane.getButton("btnUnload")!!.isEnabled = true
+
+        }
+        buttonPane.getButton("btnUnload")!!.onClick {
+            transportCompany.unloadTruck(pane.getInputText("inLicensePlate")!!.text)
+            pane.getLabels("imgTruck")!!.icon("./data/images/emptyTruck.png")
+            pane.getInputText("inLoad")!!.text = truck.currentLoad.toString() + " kg"
+            addInformation()
+            buttonPane.getButton("btnLoad")!!.isEnabled = true
+            buttonPane.getButton("btnUnload")!!.isEnabled = false
+        }
+    }
+}
+```
