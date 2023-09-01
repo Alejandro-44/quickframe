@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="quickframe:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/quickframe_jar</output-path>
+    <root id="archive" name="quickframe.jar">
+      <element id="module-output" name="quickframe" />
+    </root>
+  </artifact>
+</component>
