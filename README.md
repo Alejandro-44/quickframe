@@ -894,7 +894,7 @@ val frame = buildFrame {
     addToBottom(optionsPane)
     addInformation()
     addTrucks()
-    configurateEvents()
+    configureEvents()
 }
 ```
 
