@@ -776,9 +776,9 @@ fun main() {
 ### Events
 
 To add events in QuickFrame, we have to use the Button component.
-In this version buttons are the only component receives events, specifically on click. 
+In this version buttons are the only component receives events, specifically on click.
 But before, you must add the basic information for interaction of the GUI.
-In each case you are going to create a new function to call them later.
+In each case, you are going to create a new function to call them later.
 So, first you must create a new instance of
 `TransportCompany` in the project:
 
@@ -806,52 +806,96 @@ fun addInformation() {
 After you have to load information for each truck panel. Firstly, you can store all truck panels in an array.
 Then, you can use the same process you use before to add information to the information pane, but in this case
 you can access to each truck of the company using the `trucks` property that contains each truck object from
-the company. So, using a cycle you can put the information effectly.
+the company. So, using a cycle you can put the information.
 
 ```kotlin
 val truckPanes = arrayOf(truckPaneA, truckPaneB, truckPaneC, truckPaneD)
 fun addTrucks() {
     for (i in 0 until 4) {
-        val pane = truckPanes[i]
-        pane.getInputText("inLicensePlate")!!.text = transportCompany.trucks[i].licensePlate
-        pane.getInputText("inCapacity")!!.text = transportCompany.trucks[i].capacity.toString() + " Kg"
-        pane.getInputText("inConsumption")!!.text = transportCompany.trucks[i].consumption.toString() + " gal/km"
-        pane.getInputText("inLoad")!!.text = transportCompany.trucks[i].currentLoad.toString() + " Kg"
+        val pane = truckPanes[i] // select a pane
+        pane.getInputText("inLicensePlate")!!.text = transportCompany.trucks[i].licensePlate // add license info
+        pane.getInputText("inCapacity")!!.text = transportCompany.trucks[i].capacity.toString() + " Kg" // add capacity info
+        pane.getInputText("inConsumption")!!.text = transportCompany.trucks[i].consumption.toString() + " gal/km" // add consumption info
+        pane.getInputText("inLoad")!!.text = transportCompany.trucks[i].currentLoad.toString() + " Kg" // add current load info
     }
 }
 ```
 
-Now comes the longest task, create the events and actions. 
+Now comes the longest task, create the events and actions.
+To add an action when a button is clicked, you can use the method `onClick`.
+This lets you perform any action you want on the GUI.
+Also, you can get a button with `getButton` method and the ID.
+So you have to store the button panels in an array and access each one by a cycle
+and create define actions.
 
 ```kotlin
 /*
-* ------------------------- LOAD EVENTS ----------------------------
+* --------------------------------- LOAD EVENTS ----------------------------
 * */
 
+val buttonPanes = arrayOf(truckButtonsA, truckButtonsB, truckButtonsC, truckButtonsD)
 
-fun configurateEvents() {
+fun configureEvents() {
     for (i in 0 until 4) {
-        val buttonPane = buttonPanes[i]
-        val truck = transportCompany.trucks[i]
-        val pane = truckPanes[i]
+        val buttonPane = buttonPanes[i] // select a button pane
+        val truck = transportCompany.trucks[i] // select a truck
+        val pane = truckPanes[i] // select a truck pane
+        
+        // define action when click load button
         buttonPane.getButton("btnLoad")!!.onClick {
-            val weight = inputMessage(null, "Load").toInt()
+            val weight = inputMessage(null, "Load").toInt() // create an input dialog to get the weight of the load
+            // load selected truck
             transportCompany.loadTruck(pane.getInputText("inLicensePlate")!!.text, weight)
-            pane.getLabels("imgTruck")!!.icon("./data/images/loadedTruck.png")
+            // get the image label and change image when load the truck
+            pane.getLabels("imgTruck")!!.icon("./data/images/loadedTruck.png") 
+            // get load input and set the new current load as value
             pane.getInputText("inLoad")!!.text = truck.currentLoad.toString() + " kg"
+            // update information panel
             addInformation()
+            // unable load button
             buttonPane.getButton("btnLoad")!!.isEnabled = false
+            // enable unload button
             buttonPane.getButton("btnUnload")!!.isEnabled = true
 
         }
         buttonPane.getButton("btnUnload")!!.onClick {
+            // unload selected truck
             transportCompany.unloadTruck(pane.getInputText("inLicensePlate")!!.text)
+            // change image when unload
             pane.getLabels("imgTruck")!!.icon("./data/images/emptyTruck.png")
+            // get load input and set the new current load as value
             pane.getInputText("inLoad")!!.text = truck.currentLoad.toString() + " kg"
+            // update information panel
             addInformation()
+            // enable load button
             buttonPane.getButton("btnLoad")!!.isEnabled = true
+            // unable unload button
             buttonPane.getButton("btnUnload")!!.isEnabled = false
         }
     }
 }
 ```
+
+Another important aspect in this topic is the messages.
+QuickFrame has functions to launch messages for errors, warnings and inputs.
+In this case, you use `inputMessage` function to create an input dialog.
+Finally, to add those configurations to your GUI, you must call the previous function within the frame variable.
+
+```kotlin
+val frame = buildFrame {
+    properties {
+        it size Dimension(750, 700)
+        it resizable false
+        it onClose EXIT
+        it location Point(293, 0)
+    }
+    addToTop(headerGroup)
+    addToCenter(mainGroup)
+    addToBottom(optionsPane)
+    addInformation()
+    addTrucks()
+    configureEvents()
+}
+```
+
+Now you can interact with the GUI!
