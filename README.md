@@ -17,7 +17,7 @@ component properties line by line.
 
 ## Install
 
-To install this DSL you must download [quickframe.jar]() and add it in a directory.
+To install this DSL you must download [quickframe.jar](https://github.com/Alejandro-44/quickframe/releases/tag/v0.1.0) and add it in a directory.
 
 ## Preview
 
