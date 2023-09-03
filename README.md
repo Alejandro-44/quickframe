@@ -879,7 +879,7 @@ fun configureEvents() {
 Another important aspect in this topic is the messages.
 QuickFrame has functions to launch messages for errors, warnings and inputs.
 In this case, you use `inputMessage` function to create an input dialog.
-Finally, to add those configurations to your GUI, you must call the previous function within the frame variable.
+To add these configurations to your GUI, you must call the previous function within the frame variable.
 
 ```kotlin
 val frame = buildFrame {
@@ -892,9 +892,79 @@ val frame = buildFrame {
     addToTop(headerGroup)
     addToCenter(mainGroup)
     addToBottom(optionsPane)
-    addInformation()
-    addTrucks()
-    configureEvents()
+    addInformation() // add information
+    addTrucks() // add truck's information
+    configureEvents() // add events
+}
+```
+
+Finally, you have to define the actions for buttons in the options panel.
+For this you can use the method `onClick` and methods from the truck company instance.
+
+```kotlin
+val optionsPane = buildForm {
+    properties {
+        it titledBorder "Options" //add title to section
+    }
+    button("btnBetterTruck") {
+        properties {
+            it text "Search the best truck"
+        }
+        grid position Point(0,0)
+        grid weightX 0.5
+        grid fill horizontal
+        onClick { // defining new action
+            val weight = inputMessage(null, "load weight: ").toInt() // create input dialog and get input as an integer
+            informationMessage(
+                null,
+                "The most loaded Truck is: " + transportCompany.getBestTruck(weight)?.licensePlate, // show a message dialog with the license plate of the best truck
+                "Most loaded truck")
+        }
+    }
+    button("btnTotalCapacity") {
+        properties {
+            it text "Total capacity"
+        }
+        grid position Point(0, 1)
+        grid weightX 0.5
+        grid fill horizontal
+        onClick {
+            informationMessage(
+                 null,
+                "The most loaded Truck is: " + transportCompany.getTotalCapacity().toString(), // show the total capacity of the company
+                "Most loaded truck")
+        }
+    }
+    button("btnMostLoad") {
+        properties {
+            it text "Search the most loaded truck"
+        }
+        grid position Point(1, 0)
+        grid weightX 0.5
+        grid fill horizontal
+
+        onClick {
+            informationMessage(
+                 null,
+                "The most loaded Truck is: " + transportCompany.truckMostLoadedLicensePlate(), // show the most loaded truck in the company
+                "Most loaded truck")
+        }
+    }
+    button("btnEmptyTrucks") {
+        properties {
+            it text "Empty Trucks"
+        }
+        grid position Point(1, 1)
+        grid weightX 0.5
+        grid fill horizontal
+        onClick {
+            informationMessage(
+                null,
+                "Number of empty truck: " + transportCompany.quantityTrucksUnloaded(), // show how many trucks are empty
+                "Empty Trucks"
+            )
+        }
+    }
 }
 ```
 
