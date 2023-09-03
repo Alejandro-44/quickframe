@@ -970,7 +970,6 @@ val optionsPane = buildForm {
             )
         }
     }
-}
 ```
 
 Now you can interact with the GUI!
