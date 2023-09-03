@@ -15,6 +15,10 @@ This DSL avoids the use of `.` and `()`. Although on some occasions it will be n
 The main idea of this DSL is defined components similar to CSS, so you are going to define 
 component properties line by line. 
 
+## Install
+
+To install this DSL you must download [quickframe.jar]() and add it in a directory.
+
 ## Preview
 
 ```kotlin
@@ -195,7 +199,8 @@ Moreover, you can define additional properties for the component in the layout, 
 
 ### Building GUIs
 
-For this tutorial, you are going to make the following GUI:
+For this tutoria, you have to download the file [quickframetutorial.zip](https://github.com/Alejandro-44/quickframe/tree/main/docs/tutorial) and in `/src/main/kotlin/view` create the gile `view.kt`,
+in this file you are going to build the following GUI:
 
 ![](/docs/images/tutorialGUI.png)
 
